@@ -10,6 +10,10 @@ const connection = mysql.createConnection({
   database: "maissist_jkastro",
 });
 
+app.get("/", (req, res) => {
+  res.send("-> SEJA BEM VINDO! <-");
+});
+
 // Rota para exibir todos os produtos
 app.get("/produtos", (req, res) => {
   // Consulta ao banco de dados para buscar todos os produtos
